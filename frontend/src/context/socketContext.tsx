@@ -37,6 +37,7 @@ const SocketProvider: FC<ProviderProps> = ({ children }) => {
       userId: 1,
     },
   });
+
   const [store] = useState(() =>
     createStore<SocketState>((set) => ({
       ws,

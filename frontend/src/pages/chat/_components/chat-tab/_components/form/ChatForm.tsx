@@ -23,9 +23,14 @@ export const ChatForm = () => {
 
   return (
     <div className="p-[20px] px-[10px]">
-      <form onSubmit={(e) => handleMessageSend(e)} className="flex gap-[10px]">
+      <form
+        onSubmit={(e) => handleMessageSend(e)}
+        className="flex gap-[10px]"
+        data-testid="chat-form"
+      >
         <input
           type="text"
+          data-testid="chat-form-input"
           placeholder={`Message ${currentRecipient?.name || ""}`}
           className="flex-1 rounded-full border-[8px] border-[#cfcfcf] px-[12px] py-[8px]"
           value={currentMessage}

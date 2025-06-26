@@ -37,8 +37,6 @@ export const initSocket = (io: WSServer) => {
       const { userId } = socket.handshake.query;
       const { recipientId, content } = decodeMsg(msg);
 
-      console.log("info", { userId, recipientId, content });
-
       io.to(`USER#${recipientId}`).emit(
         "chat-msg-recieved",
         encodeMsg({ content, sender: userId })

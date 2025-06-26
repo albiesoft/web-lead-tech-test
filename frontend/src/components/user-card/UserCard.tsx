@@ -1,6 +1,11 @@
+import type { FC } from "react";
 import type { User } from "../../store/user.store.ts";
 
-const UserCard = ({ user }: { user: User }) => {
+export interface UserCardProps {
+  user: User;
+}
+
+const UserCard: FC<UserCardProps> = ({ user }) => {
   return (
     <div className="flex gap-2.5 items-center justify-center">
       <img

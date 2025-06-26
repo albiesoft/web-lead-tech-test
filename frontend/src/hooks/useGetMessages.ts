@@ -1,5 +1,5 @@
 import { useSocket } from "@/context/socketContext";
-import useMessagesStore, { type Message } from "@/store/messages.store";
+import useMessagesStore from "@/store/messages.store";
 import { decodeMsg } from "@/utils/messages";
 import { useEffect, useState } from "react";
 
